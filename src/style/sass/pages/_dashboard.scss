@@ -1,0 +1,7 @@
+.root{
+    display: flex;
+    position: relative;
+
+    @import "../components/nav";
+    @import "../components/dashboard-content";
+}

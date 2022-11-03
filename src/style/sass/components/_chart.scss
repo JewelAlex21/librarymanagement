@@ -1,0 +1,7 @@
+.chart{
+    @include flex(space-around, center);
+    width:86vw;
+    margin-top: 2rem;
+    padding: 2rem 8rem;
+    flex-wrap:wrap;
+}

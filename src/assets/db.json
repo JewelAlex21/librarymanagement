@@ -1,0 +1,58 @@
+
+
+
+{
+  "bookInfo": [
+    {
+      "id": 1,
+      "name": "John",
+      "bookName": "Half-bads in White Regalia",
+      "isbn": "819.8603",
+      "contact": "7895222233",
+      "bookTakenIn": "2022-10-02",
+      "bookReturnDate": "2022-10-29",
+      "notReturned": true
+    },
+    {
+      "id": 2,
+      "name": "Sam",
+      "bookName": "All Roads Home A Life on and Off the Ice",
+      "isbn": "796.962092",
+      "contact": "8945213655",
+      "bookTakenIn": "2022-10-18",
+      "bookReturnDate": "2022-11-01",
+      "notReturned": false
+    },
+    {
+      "id": 3,
+      "name": "Amy ",
+      "bookName": "Mind Over Matter Hard-Won Battles on the Path to Hope",
+      "isbn": "164696",
+      "contact": "7894223336",
+      "bookTakenIn": "2022-10-27",
+      "bookReturnDate": "2022-11-16",
+      "notReturned": true
+    },
+    {
+      "id": 4,
+      "name": "Manu",
+      "bookName": " Unreconciled Family, Truth, and Indigenous Resistance",
+      "isbn": "895666",
+      "contact": "9326548522",
+      "bookTakenIn": "2022-11-02",
+      "bookReturnDate": "2022-12-01",
+      "notReturned": true
+    },
+    {
+      "id": 5,
+      "name": "Julie",
+      "bookName": " From the Ashes My Story of Being Métis, Homeless, and Finding My Way",
+      "isbn": "956566",
+      "contact": "8456622589",
+      "bookTakenIn": "2022-10-05",
+      "bookReturnDate": "2022-10-30",
+      "notReturned": false
+    }
+  ]
+}
+

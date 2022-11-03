@@ -1,0 +1,53 @@
+<app-navigation></app-navigation>
+<section class="signin">
+  <article class="signin__wrapper">
+    <div class="card signin__card">
+      <div class="signin__head-wrapper">
+        <h1 class="title">Log In</h1>
+      </div>
+
+      <form class="signin__form">
+        <div class="signin__input-wrapper">
+          <input
+            type="name"
+            placeholder="Enter your name"
+            class="input"
+            name="loginName"
+          />
+        </div>
+        <div class="signin__input-wrapper">
+          <input
+            type="password"
+            placeholder="Enter your password"
+            class="input"
+            name="loginPassword"
+          />
+        </div>
+        <button
+          class="btn btn--secondary signin__input-wrapper"
+          type="submit"
+          name="loginBtn"
+        >
+          Log In
+        </button>
+      </form>
+    </div>
+
+    <aside class="card signin__banner">
+      <div class="signin__overlay">
+        <h1 class="title title--auth">Dont Have an Account?</h1>
+        <p class="description">
+          Click the button below to create a brand new Account
+        </p>
+        <button
+          class="btn signin__banner-btn"
+          type="button"
+          routerLink="/signup"
+        >
+          Sign Up
+        </button>
+      </div>
+    </aside>
+  </article>
+</section>
+<app-footer></app-footer>

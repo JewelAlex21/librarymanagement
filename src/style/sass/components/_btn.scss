@@ -1,0 +1,48 @@
+.btn {
+  width: 100%;
+  padding: 0.9rem;
+    border-radius: 0.2rem;
+    background-color: #130f4900;
+    color: $primaryColor;
+  font-size:1rem;
+  font-weight: bolder;
+    text-transform: uppercase;
+    border: 2px solid #130f49;
+    cursor: pointer;
+  &:hover {
+    color: white;
+    background-color: #1a1564 ;
+  }
+
+  //--clear
+  &--warning{
+    color: red;
+    border-color: rgba(255, 0, 0, 0);
+    &:hover {
+      background-color:red;
+      color: white;
+    }
+  }
+
+  //--home
+  &--primary{
+    text-align: left;
+    border: none;
+
+    &:hover{
+      background-color:#130f4900;
+      color: #130f49;
+    }
+  }
+
+  //--auth
+  &--secondary{
+    padding: 0.8rem;
+    width:15rem;
+  }
+
+  //--edit
+  &--ternary{
+    display: none;
+  }
+}

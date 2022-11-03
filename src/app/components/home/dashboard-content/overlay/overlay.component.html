@@ -1,0 +1,153 @@
+<div class="overlay is-visible">
+  <!--[hidden]="modal"
+-->
+  <div class="card action-strip">
+    <div class="title title--dash" id="actionTitle">
+      {{ editOverlayChanges.action }} Info
+    </div>
+    <i
+      class="fas icons fa-close"
+      id="modal-close"
+      (click)="crossClickHandler()"
+    ></i>
+
+    <form
+      class="action-strip__wrapper"
+      (ngSubmit)="onSubmit()"
+      [formGroup]="overlayForm"
+    >
+      <div class="action-strip__input-wrapper">
+        <div class="action-strip__input-wrapper">
+          <label for="name">Name</label>
+          <div>
+            <input
+              class="input action-strip__input"
+              type=" text"
+              id="name"
+              placeholder="Enter your Name"
+              name="name"
+              formControlName="name"
+            />
+          </div>
+        </div>
+        <div class="action-strip__input-wrapper">
+          <label for="book">Book Name</label>
+          <div>
+            <input
+              class="input action-strip__input"
+              type="text"
+              id="book"
+              placeholder="Enter the Book Name"
+              name="bookName"
+              formControlName="bookName"
+            />
+          </div>
+        </div>
+        <div class="action-strip__input-wrapper">
+          <label for="isbn">ISBN</label>
+          <div>
+            <input
+              class="input action-strip__input"
+              type="text"
+              id="isbn"
+              placeholder="Enter the ISBN"
+              name="isbn"
+              formControlName="isbn"
+            />
+          </div>
+        </div>
+        <div class="action-strip__input-wrapper">
+          <label for="contact">Contact Number</label>
+          <label style="display: hidden" id="indexValue"></label>
+          <div>
+            <input
+              class="input action-strip__input"
+              type="text"
+              id="contact"
+              placeholder="Enter your Contact Number"
+              name="contact"
+              formControlName="contact"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="action-strip__date-container">
+        <div class="action-strip__date-wrapper">
+          <label class="action-strip__date-label-name" for="bookTakenIn"
+            >Book taken in</label
+          >
+          <div class="action-strip__textfield-wrapper">
+            <input
+              class="input action-strip__date"
+              type="date"
+              name="bookTakenIn"
+              id="bookTakenIn"
+              name="bookTakenIn"
+              formControlName="bookTakenIn"
+            />
+          </div>
+        </div>
+        <div class="action-strip__date-wrapper">
+          <label
+            class="action-strip__date-label-name"
+            for="bookReturnDate"
+            name="bookReturnDateLabel"
+            >Book return date</label
+          >
+          <div class="action-strip__textfield-wrapper">
+            <input
+              class="input action-strip__date"
+              type="date"
+              name="bookReturnDate"
+              id="bookReturnDate"
+              name="bookReturnDate"
+              formControlName="bookReturnDate"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="action-strip__checkbox-wrapper">
+        <label for="checkbox">Not Returned?</label>
+        <input
+          class="action-strip__checkbox"
+          type="checkbox"
+          id="checkbox"
+          name="checkbox"
+          formControlName="notReturned"
+        />
+      </div>
+
+      <div class="action-strip__btn-container">
+        <div class="action-strip__btn-wrapper">
+          <button class="btn btn--warning" type="reset">Clear All</button>
+        </div>
+        <div>
+          <div class="action-strip__btn-wrapper">
+            <button
+              class="btn"
+              type="submit"
+              name="submitBtn"
+              id="submitBtn"
+              [hidden]="editOverlayChanges.hideSubmit"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+        <div class="action-strip__btn-wrapper">
+          <button
+            class="btn"
+            type="button"
+            name="submitBtn"
+            [hidden]="!editOverlayChanges.hideSubmit"
+            (click)="onEdit()"
+          >
+            Edit
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

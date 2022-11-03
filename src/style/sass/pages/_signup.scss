@@ -1,0 +1,52 @@
+.signup {
+  width: 90%;
+
+  @include flex(center,center);
+  height: 82.55vh;
+  margin: auto;
+
+  &__card{
+      padding-top:2rem;
+  }
+
+&__wrapper{
+   width: 80%;
+  @include flex(center,center);
+  }
+&__input-wrapper{
+    margin-top:1.2rem;
+  }
+
+  &__card{
+    width: 50%;
+    height: 25.1rem;
+    text-align: center;
+  }
+
+  &__banner{
+
+    color: white;
+    height: 25.1rem;
+    text-align: center;
+    padding:7rem 2rem;
+    background:linear-gradient(
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.788) 90%
+          ),
+          url(assets/images/signup-background.jpg);;
+  }
+
+  &__banner-btn{
+    color:white;
+    border:2px solid rgba(65, 161, 225, 0.733);
+    width: 50%;
+    &:hover{
+
+      color: #dcdeeb;
+      background-color: rgba(255, 255, 255, 0);
+
+  }
+
+
+}
+}
