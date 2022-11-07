@@ -14,10 +14,10 @@
       </tr>
 
       <tr class="table__head-row">
-        <td class="table__head-data">Name</td>
+        <!-- <td class="table__head-data">Name</td> -->
         <td class="table__head-data">Book</td>
         <td class="table__head-data">ISBN</td>
-        <td class="table__head-data">Contact</td>
+        <!-- <td class="table__head-data">Contact</td> -->
         <td class="table__head-data">Borrowed</td>
         <td class="table__head-data">Returned</td>
         <td class="table__head-data">Return Status</td>
@@ -27,12 +27,12 @@
     </thead>
     <tbody class="table__body">
       <tr class="table__body-row" *ngFor="let bookInfo of bookInfoArr">
-        <td class="table__body-data">{{ bookInfo.name }}</td>
-        <td class="table__body-data">{{ bookInfo.bookName }}</td>
+        <!-- <td class="table__body-data">{{ bookInfo.name }}</td> -->
+        <td class="table__body-data">{{ bookInfo.bookName }} <a class="btn btn--primary" href="/book-details/{{bookInfo.id}}">View Book</a></td>
         <td class="table__body-data">{{ bookInfo.isbn }}</td>
-        <td class="table__body-data">
+        <!-- <td class="table__body-data">
           {{ bookInfo.contact }}
-        </td>
+        </td> -->
         <td class="table__body-data">{{ bookInfo.bookTakenIn }}</td>
         <td class="table__body-data">{{ bookInfo.bookReturnDate }}</td>
         <td class="table__body-data">

@@ -134,4 +134,6 @@ export class TableComponent implements OnInit {
 
     this.formData.currentform.subscribe((form) => (this.overlayForm = form));
   }
+
+ 
 }

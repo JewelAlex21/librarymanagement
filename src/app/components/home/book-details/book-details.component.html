@@ -1,0 +1,33 @@
+
+<article class="table">
+    <table cellspacing="0" cellpadding="0" class="table__wrapper">
+      <thead class="table__head">
+        <tr class="table__head-row">
+          <td class="table__head-icons" colspan="10">
+           
+          </td>
+        </tr>
+  
+        <tr class="table__head-row">
+          <td class="table__head-data">Name</td>
+          <td class="table__head-data">Contact</td>
+          <td class="table__head-data">Book</td>
+          <td class="table__head-data">Accept</td>
+          <td class="table__head-data">Reject</td>
+        </tr>
+      </thead>
+      <tbody class="table__body">
+        <tr class="table__body-row" *ngFor="let bookInfo of bookInfoArr">
+          <td class="table__body-data">{{ bookInfo.name}}</td>
+          <td class="table__body-data">{{ bookInfo.contact}}</td>
+          <td class="table__body-data">{{ bookInfo.bookName}}</td>
+          <td class="table__body-data"><i class="fa-solid fa-check"></i></td>
+          <td class="table__body-data"><i class="fa-solid fa-xmark"></i></td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </article>
+  
+  <router-outlet></router-outlet>
+  

@@ -7,6 +7,7 @@ import { TableComponent } from "./table/table.component";
 import { RouterModule } from "@angular/router";
 import { OverlayComponent } from "./dashboard-content/overlay/overlay.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { BookDetailsComponent } from "./book-details/book-details.component";
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     ChartsComponent,
     TableComponent,
     OverlayComponent,
+    BookDetailsComponent,
   ],
   exports: [
     UsernavigationComponent,

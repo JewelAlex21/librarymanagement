@@ -1,6 +1,3 @@
-
-
-
 {
   "bookInfo": [
     {
@@ -46,7 +43,7 @@
     {
       "id": 5,
       "name": "Julie",
-      "bookName": " From the Ashes My Story of Being Métis, Homeless, and Finding My Way",
+      "bookName": " From the Ashes My Story of Being Métis, Homeless",
       "isbn": "956566",
       "contact": "8456622589",
       "bookTakenIn": "2022-10-05",
@@ -55,4 +52,3 @@
     }
   ]
 }
-
