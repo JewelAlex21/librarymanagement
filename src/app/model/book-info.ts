@@ -1,5 +1,5 @@
 export class BookInfo {
-  id!: number;
+  id?: string;
   name!: string;
   bookName!: string;
   isbn!: number;

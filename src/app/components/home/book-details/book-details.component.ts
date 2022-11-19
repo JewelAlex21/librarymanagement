@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { BookInfo } from 'src/app/model/book-info';
 import { CrudService } from 'src/app/service/crud.service';
-import { BookInfoInput } from '../../types/BookInfo';
 
 @Component({
   selector: 'app-book-details',
@@ -11,52 +10,28 @@ import { BookInfoInput } from '../../types/BookInfo';
 })
 export class BookDetailsComponent implements OnInit {
  
-  bookInfoObj: BookInfo = new BookInfo();
+  public bookinfoId : string | null = '' ;
+  public selectedBook : BookInfo = {} as BookInfo;
+  public errorMessage : string | undefined;
 
-  //used to store all the BookInfo from the server
-  bookInfoArr: BookInfo[] = [];
-  //storing variable from template
-  bookInfoinput!: BookInfoInput[];
 
-  editInfoInput!: BookInfoInput[];
-  bookList:any
-
-  getAllBookInfo(): void {
-    this.bookInfoObj = new BookInfo();
-    this.bookInfoArr = [];
-    this.getAllBooks();
-  }
-
-  getAllBooks() {
-    this.crudService.getAllBooks().subscribe(
-      (res) => {
-        //@ts-ignore
-        this.bookInfoArr.push(...res);
-      },
-      (err) => {
-        alert(`Unable to fetch the list of Books ${err}`);
-      }
-    );
-  }
 
 
   constructor(private route: ActivatedRoute,private router: Router,private crudService:CrudService ) { }
 
   ngOnInit(): void {
-    this.getAllBookInfo();
-
-    // this.route.paramMap.subscribe((param) => {
-    //   this.bookinfoId = param.get('id');
-    // });
-    // if (this.bookinfoId) {
-    //   this.crudService.getBook(this.bookinfoId).subscribe(
-    //     (data) => {
-    //       this.book =(data);
-    //     }
-    //   );
-    // }
-    // console.log(this.bookinfoId);
-   
+    this.route.paramMap
+    .subscribe((param : ParamMap)=>{
+      this.bookinfoId = param.get('id');
+    });
+    if(this.bookinfoId){
+      this.crudService.getBook(this.bookinfoId)
+      .subscribe((data) => {
+        this.selectedBook = data;
+      },(error)=>{
+        this.errorMessage = error;
+      });      
+    }   
   }
   
 } 

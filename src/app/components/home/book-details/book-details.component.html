@@ -1,5 +1,8 @@
 
+
 <article class="table">
+  <h2 class="table__body-data">{{selectedBook.bookName}}</h2>
+
     <table cellspacing="0" cellpadding="0" class="table__wrapper">
       <thead class="table__head">
         <tr class="table__head-row">
@@ -11,18 +14,22 @@
         <tr class="table__head-row">
           <td class="table__head-data">Name</td>
           <td class="table__head-data">Contact</td>
-          <td class="table__head-data">Book</td>
-          <td class="table__head-data">Accept</td>
-          <td class="table__head-data">Reject</td>
+          <td class="table__head-data">Borrowed</td>
+          <td class="table__head-data">Returned</td>
+          <td class="table__head-data">Return Status</td>
+          
         </tr>
       </thead>
       <tbody class="table__body">
-        <tr class="table__body-row" *ngFor="let bookInfo of bookInfoArr">
-          <td class="table__body-data">{{ bookInfo.name}}</td>
-          <td class="table__body-data">{{ bookInfo.contact}}</td>
-          <td class="table__body-data">{{ bookInfo.bookName}}</td>
-          <td class="table__body-data"><i class="fa-solid fa-check"></i></td>
-          <td class="table__body-data"><i class="fa-solid fa-xmark"></i></td>
+        <tr class="table__body-row" >
+          <td class="table__body-data">{{selectedBook.name}}</td>
+          <td class="table__body-data">{{selectedBook.contact}}</td>
+          <td class="table__body-data">{{selectedBook.bookTakenIn }}</td>
+          <td class="table__body-data">{{selectedBook.bookReturnDate }}</td>
+          <td class="table__body-data">
+          {{selectedBook.notReturned ? "Not Returned" : "Returned" }}
+          </td>
+         
           
         </tr>
       </tbody>

@@ -30,13 +30,9 @@ export class CrudService {
     );
   }
 
-  // getBook(bookInfo:BookInfo): Observable<BookInfo> {
-  //   return this.http.get<BookInfo>(this.serviceURL + '/' + bookInfo.id);
-  // }
  
-  getBook(bookinfoId: BookInfo): Observable<BookInfo> {
-    return this.http.get<BookInfo>(this.serviceURL + '/' + bookinfoId.id);
-    
+  public getBook(bookinfoId: string): Observable<BookInfo> {
+    return this.http.get<BookInfo>(this.serviceURL + '/' + bookinfoId); 
   }
       
 }
